@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/yudytskii_diploma/static/css/main.dbb044ad.chunk.css",
-    "main.js": "/yudytskii_diploma/static/js/main.5a8abeed.chunk.js",
-    "main.js.map": "/yudytskii_diploma/static/js/main.5a8abeed.chunk.js.map",
+    "main.js": "/yudytskii_diploma/static/js/main.9614702f.chunk.js",
+    "main.js.map": "/yudytskii_diploma/static/js/main.9614702f.chunk.js.map",
     "runtime-main.js": "/yudytskii_diploma/static/js/runtime-main.d4df9642.js",
     "runtime-main.js.map": "/yudytskii_diploma/static/js/runtime-main.d4df9642.js.map",
     "static/css/2.41d09715.chunk.css": "/yudytskii_diploma/static/css/2.41d09715.chunk.css",
     "static/js/2.f8ab76e7.chunk.js": "/yudytskii_diploma/static/js/2.f8ab76e7.chunk.js",
     "static/js/2.f8ab76e7.chunk.js.map": "/yudytskii_diploma/static/js/2.f8ab76e7.chunk.js.map",
     "index.html": "/yudytskii_diploma/index.html",
-    "precache-manifest.965d09e328e170ab5c9908a627decf00.js": "/yudytskii_diploma/precache-manifest.965d09e328e170ab5c9908a627decf00.js",
+    "precache-manifest.e20693bc1657e42e7a6f8680cee802c9.js": "/yudytskii_diploma/precache-manifest.e20693bc1657e42e7a6f8680cee802c9.js",
     "service-worker.js": "/yudytskii_diploma/service-worker.js",
     "static/css/2.41d09715.chunk.css.map": "/yudytskii_diploma/static/css/2.41d09715.chunk.css.map",
     "static/css/main.dbb044ad.chunk.css.map": "/yudytskii_diploma/static/css/main.dbb044ad.chunk.css.map",
@@ -109,6 +109,6 @@
     "static/css/2.41d09715.chunk.css",
     "static/js/2.f8ab76e7.chunk.js",
     "static/css/main.dbb044ad.chunk.css",
-    "static/js/main.5a8abeed.chunk.js"
+    "static/js/main.9614702f.chunk.js"
   ]
 }
