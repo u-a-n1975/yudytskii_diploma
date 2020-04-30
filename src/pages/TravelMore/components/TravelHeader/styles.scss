@@ -1,0 +1,64 @@
+@import "../../styles.scss";
+
+.travel-header {
+  width: 100vw;
+  max-width: $maxWidth;
+  height: $hedaerHeight;
+  position: absolute;
+  z-index: 9999;
+  top: calc(100vh - 80px);
+  background-color: $TravelPrimary;
+  color: $white;
+  &--on-scroll {
+    position: fixed;
+    top: 0;
+  }
+
+  &__content-container {
+    padding: 0 16px;
+    @include display-flex(initial);
+  }
+
+  &__content {
+    display: flex;
+    height: 80px;
+    @media (max-width: $deviceSizeXS) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__right-block {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $deviceSizeXS) {
+      width: max-content;
+    }
+  }
+
+  &__menu-btn-wrapper {
+    @media (max-width: $deviceSizeSM) {
+      display: flex;
+      flex-shrink: 0;
+      margin-left: 20px;
+    }
+  }
+  &__logo {
+    @include display-flex;
+    width: 100%;
+    max-width: 50%;
+    margin: 0 10px;
+    color: $white;
+    font-size: $fontSizeLarge;
+    font-weight: $fontWeightBold;
+    text-transform: uppercase;
+    transition: text-shadow 0.25s ease-in-out;
+
+    &:hover {
+      text-shadow: 1px 1px 1px $black, 2px 2px 2px $black;
+    }
+    @media (max-width: $deviceSizeMD) {
+      margin: 0;
+    }
+  }
+}

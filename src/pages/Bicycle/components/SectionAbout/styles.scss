@@ -1,0 +1,42 @@
+@import "../../../../styles/index.scss";
+
+.bicycle-about {
+  width: 100vw;
+  max-width: $maxWidth;
+  @include display-flex;
+  padding: 100px 16px;
+  overflow: hidden;
+  @media (max-width: $deviceSizeMD) {
+    padding: 80px 16px;
+  }
+  @media (max-width: $deviceSizeSM) {
+    padding: 50px 16px;
+  }
+  @media (max-width: $deviceSizeXS) {
+    padding: 20px 0;
+  }
+  &__title-block {
+    padding: 16px;
+    &--icon {
+      @include display-flex;
+      margin-bottom: 30px;
+      & > div {
+        width: 52px;
+        height: 43px;
+      }
+    }
+    &--title {
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      color: $TitleText;
+      text-align: center;
+      font-size: $fontSizeSecond;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    &--text {
+      text-align: center;
+      letter-spacing: 0.9px;
+    }
+  }
+}

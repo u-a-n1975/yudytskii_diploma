@@ -1,0 +1,73 @@
+@import "../../../../styles/index.scss";
+
+.travel-contact {
+  width: 100vw;
+  max-width: $maxWidth;
+  min-height: 268px;
+  @include display-flex;
+  background-color: $TravelBrown;
+  &__title {
+    font-size: $fontSizeLarge;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+  &__subtitle {
+    margin-top: 10px;
+    text-transform: capitalize;
+    letter-spacing: 0.15em;
+  }
+  &__social-block {
+    margin-top: 10px;
+    @include display-flex(center, center, row);
+    & > div {
+      width: 35px;
+      height: 35px;
+      @include display-flex;
+      margin-left: 10px;
+      border: 1px solid $TravelBrown;
+      border-radius: 50%;
+      transition: text-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+      &:hover {
+        border: 1px solid $white;
+        text-shadow: 1px 1px 5px $black;
+        transform: translate3d(0 0 0);
+
+        svg .cls-1 {
+          fill: $white;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &--fasebook {
+      .cls-1 {
+        fill: #1b65b0;
+      }
+    }
+    &--tvitter {
+      .cls-1 {
+        fill: #40abe1;
+      }
+    }
+    &--linkedin {
+      .cls-1 {
+        fill: #069;
+      }
+    }
+    &--skype {
+      .cls-1 {
+        fill: #00a9f1;
+      }
+    }
+    &--pinterest {
+      .cls-1 {
+        fill: #ec2327;
+      }
+    }
+  }
+}

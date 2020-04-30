@@ -1,0 +1,165 @@
+@import "../../../../../../styles/index.scss";
+
+.bicycle-aside {
+  position: absolute;
+  @media (orientation: portrait) {
+    left: 16px;
+    top: 50%;
+    padding: 8px 16px;
+    transform: translateX(-100vw) translateY(-50%);
+  }
+  @media (orientation: landscape) {
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    transform: translateX(-120vw) rotate(-90deg);
+  }
+
+  &--is-open {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    max-width: max-content;
+    height: max-content;
+    opacity: 1;
+    display: initial;
+    @media (orientation: landscape) {
+      transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+    }
+    @media (orientation: portrait) {
+      transform: translateX(0) translateY(-50%);
+    }
+    transition: transform 0.35s ease;
+    animation: display-initial 0.35s;
+  }
+
+  &__wrap {
+    display: none;
+
+    &--is-open {
+      display: initial;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #cccccc;
+        border-radius: 10px;
+        opacity: 0.85;
+        content: "";
+        z-index: -1;
+        @media (orientation: landscape) {
+          height: calc(100% + 60px);
+          width: 100%;
+          top: -30px;
+          transform: skewY(40deg);
+          border-top-right-radius: 10px;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 50px;
+        }
+      }
+    }
+    @media (orientation: landscape) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: 45vw;
+    min-width: 240px;
+    height: 60px;
+    margin-bottom: 5px;
+    @include display-flex(center, space-between, initial);
+    border-radius: 10px;
+    border-bottom: 1px solid $primaryDarkGrey;
+    color: black;
+    font-size: 1.125rem;
+    @media (orientation: landscape) {
+      max-width: 200px;
+      min-width: initial;
+      width: initial;
+      height: 44px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+      transform: rotate(40deg) rotateZ(180deg);
+      border-bottom: none;
+      border-top: 1px solid $primaryDarkGrey;
+    }
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
+      border-bottom 0.25s ease-in-out;
+
+    &--arrow {
+      opacity: 0;
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: translateX(-10px) rotate(-135deg);
+      }
+    }
+
+    &--wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--icon {
+      @include display-flex;
+      width: 80px;
+      svg {
+        width: 30px;
+        height: 30px;
+        filter: grayscale(100%);
+      }
+      @media (orientation: landscape) {
+        transform: rotate(-130deg);
+      }
+      transition: text-shadow 0.25s ease-in-out, font-size 0.25s ease-in-out;
+    }
+    &--lable {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      @media (orientation: landscape) {
+        transform: rotate(180deg);
+      }
+      transition: text-shadow 0.25s ease-in-out;
+    }
+
+    &--active {
+      background-color: $primaryYellow;
+      box-shadow: 5px 5px 5px $black;
+      border-bottom: 1px solid $primaryYellow;
+      @media (orientation: landscape) {
+        box-shadow: 5px -5px 5px $black;
+        border-bottom: none;
+        border-top: 1px solid $primaryYellow;
+      }
+      .bicycle-aside__item {
+        &--icon {
+          text-shadow: 1px 1px 2px $black;
+          svg {
+            width: 55px;
+            height: 55px;
+            filter: grayscale(0);
+          }
+        }
+        &--lable {
+          text-shadow: 1px 1px 1px $black;
+        }
+        &--arrow {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

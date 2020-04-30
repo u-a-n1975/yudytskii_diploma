@@ -1,0 +1,85 @@
+@import "../../../../styles/index.scss";
+
+.responsive {
+  &__content-container {
+    align-items: initial;
+  }
+  width: 100vw;
+  max-width: $maxWidth;
+  background: left top/ auto 57.18% no-repeat
+      url("../../../../assets/images/Marvel/3.Responsive-lamp.png"),
+    left 70% center / auto 66.52% no-repeat
+      url("../../../../assets/images/Marvel/3.Responsive-Run.png");
+  @media (max-width: $deviceSizeLG) {
+    background: left top/ auto 57.18% no-repeat
+        url("../../../../assets/images/Marvel/3.Responsive-lamp.png"),
+      right 30px center / auto 66.52% no-repeat
+        url("../../../../assets/images/Marvel/3.Responsive-Run.png");
+  }
+  @media (max-width: 854px) {
+    background: left top/ 32vw auto no-repeat
+        url("../../../../assets/images/Marvel/3.Responsive-lamp.png"),
+      right center / 68vw auto no-repeat
+        url("../../../../assets/images/Marvel/3.Responsive-Run.png");
+  }
+  @media (max-height: 543px) {
+    background: left top 80px / auto 57.18vh no-repeat
+        url("../../../../assets/images/Marvel/3.Responsive-lamp.png"),
+      right center / auto 100vh no-repeat
+        url("../../../../assets/images/Marvel/3.Responsive-Run.png");
+  }
+
+  &__title-block {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    &--title {
+      font-size: 4.5rem;
+      @media (max-width: $deviceSizeXS) {
+        font-size: 3.85rem;
+      }
+    }
+    &--subtitle {
+      font-size: 1.625rem;
+      top: 41px;
+    }
+    &--description {
+      margin-top: 40px;
+    }
+  }
+
+  &__info-block {
+    width: max-content;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    color: $primaryMiddleGrey;
+    &--row {
+      .row__item {
+        display: flex;
+        justify-self: start;
+        &--icon {
+          svg {
+            width: 16px;
+            height: 16px;
+            margin-bottom: 3px;
+            fill: $primaryMiddleGrey;
+          }
+        }
+        &--text {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    margin: 40px 0 25px;
+
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+  }
+}

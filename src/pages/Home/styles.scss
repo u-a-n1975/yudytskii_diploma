@@ -1,0 +1,78 @@
+@import "../../styles/index.scss";
+.home-page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & > div {
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    background-color: $primaryMiddleGrey;
+
+    a {
+      position: absolute;
+      z-index: 0;
+      display: block;
+      width: 50vw;
+      height: 50vh;
+      transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out,
+        height 0.3s ease-in-out;
+      &:hover {
+        z-index: 1;
+        background-color: unset;
+        width: 55vw;
+        height: 55vh;
+      }
+      &:active {
+        z-index: 1;
+        animation: size100 1s;
+        width: 100vw;
+        height: 100vh;
+      }
+      @media (hover: hover) {
+        background-blend-mode: multiply;
+      }
+    }
+  }
+  @media (max-width: $deviceSizeXS) {
+    display: flex;
+    flex-direction: column;
+    & > div {
+      width: 100vw;
+      a {
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
+  .resume-project {
+    a {
+      background: center top/ 100% auto no-repeat
+          url("../../assets/images/Resume_Hero.jpeg"),
+        $primaryMiddleGrey;
+    }
+  }
+  .marvel-project {
+    a {
+      background: center top/ cover no-repeat
+          url("../../assets/images/MarvelHero.jpeg"),
+        $primaryMiddleGrey;
+    }
+  }
+  .bicycle-project {
+    a {
+      background: center bottom/ cover no-repeat
+          url("../../assets/images/BicycleHero.jpeg"),
+        $primaryMiddleGrey;
+    }
+  }
+  .travel-project {
+    a {
+      background: center bottom/ cover no-repeat
+          url("../../assets/images/TravelMoreHero.jpeg"),
+        $primaryMiddleGrey;
+    }
+  }
+}

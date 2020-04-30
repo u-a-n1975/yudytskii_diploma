@@ -1,0 +1,112 @@
+@import "../../../../styles/index.scss";
+
+.bicycle-contact {
+  width: 100vw;
+  max-width: $maxWidth;
+  @include display-flex;
+  padding-top: 110px;
+  @media (max-width: $deviceSizeSM) {
+    min-height: 100vh;
+    padding-top: 120px;
+    @include display-flex(center, space-between);
+  }
+  &__logo {
+    width: 94px;
+    height: 85px;
+  }
+  p {
+    margin-top: 35px;
+    font-size: $fontSizeLarge;
+    font-style: italic;
+    color: $PrimaryText;
+  }
+  &__form {
+    width: 100%;
+    max-width: 566px;
+    @include display-flex(center, center, row);
+    margin-top: 20px;
+    padding: 16px;
+    @media (max-width: $deviceSizeXS) {
+      flex-direction: column;
+    }
+    &--email {
+      width: 100%;
+      max-width: 400px;
+      height: 70px;
+      @include display-flex;
+      border: 1px solid $PrimaryBorder;
+      padding: 20px;
+      margin: 4px;
+      font-size: $fontSizeMiddle;
+      font-style: italic;
+      color: $DarkText;
+    }
+    &--button {
+      min-width: 126px;
+      height: 70px;
+      margin: 4px;
+      background-color: $PrimaryGreen;
+      border: none;
+      color: $white;
+      text-transform: uppercase;
+      font-size: $fontSizeLarge;
+    }
+  }
+  &__content-container {
+    padding: 0 30px;
+  }
+  &__footer {
+    width: 100%;
+    margin-top: 110px;
+    background-color: $primaryGrey;
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    @include display-flex(center, flex-start, row);
+    @media (max-width: $deviceSizeSM) {
+      @include display-flex(center, space-evenly, column-reverse);
+      height: 300px;
+    }
+    &--address {
+      .address__item {
+        @media (max-width: $deviceSizeSM) {
+          @include display-flex;
+        }
+        &--city {
+          font-weight: 700;
+          line-height: $fontSizeSecond;
+        }
+        &--street,
+        &--email {
+          font-size: $fontSizeSmall;
+          font-style: italic;
+          font-weight: 400;
+          line-height: $fontSizeSecond;
+        }
+      }
+    }
+    &--social {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (max-width: $deviceSizeSM) {
+        position: relative;
+        transform: none;
+        left: 0;
+        top: 0;
+      }
+      .social__item {
+        @include display-flex(center, center, row);
+        svg {
+          width: 35px;
+          height: 35px;
+          margin: 8px;
+        }
+      }
+    }
+  }
+}

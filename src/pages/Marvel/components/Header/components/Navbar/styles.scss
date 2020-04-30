@@ -1,0 +1,50 @@
+@import "../../../../../../styles/index.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+
+  &__item {
+    padding: 5px 10px;
+    border: 1px solid $backgroundPrimary;
+    @media (max-width: $deviceSizeMD) {
+      padding: 5px;
+    }
+
+    &--active {
+      position: relative;
+      border: 1px solid $primaryYellow;
+      font-weight: 700;
+      text-shadow: 1px 1px 1px $primaryYellow, 2px 2px 2px $black;
+
+      &:after {
+        position: absolute;
+        left: calc(50% - 6px);
+        top: -16px;
+        width: 12px;
+        height: 12px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: $primaryYellow;
+        transform: rotate(-45deg);
+        content: "";
+      }
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    color: $white;
+
+    &:first-child {
+      margin-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: $deviceSizeSM) {
+    display: none;
+  }
+}

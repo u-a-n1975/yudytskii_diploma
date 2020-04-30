@@ -1,0 +1,60 @@
+@import "../../styles/index.scss";
+
+.button {
+  @include display-flex;
+  width: 100%;
+  padding: 0.8em 1rem;
+  border: 1px solid rgba(16, 16, 16, 0.1);
+  font-size: 1.125rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: $primaryDarkGrey;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $primaryYellow;
+    border: 1px solid rgba(16, 16, 16, 0.1);
+    color: $black;
+    cursor: pointer;
+  }
+
+  &--border-radius {
+    border-radius: 12px;
+  }
+  &--bg-color {
+    &-white {
+      background-color: $white;
+    }
+    &-black {
+      background-color: $black;
+    }
+    &-primaryGrey {
+      background-color: $primaryGrey;
+    }
+  }
+  &--color {
+    &-backgroundPrimary {
+      color: $backgroundPrimary;
+    }
+    &-primaryYellow {
+      color: $primaryYellow;
+    }
+    &-white {
+      color: $white;
+    }
+    &-black {
+      color: $black;
+    }
+  }
+  &--border-color {
+    &-primaryDarkGrey {
+      border-color: $primaryDarkGrey;
+    }
+    &-white {
+      border-color: $white;
+    }
+    &-black {
+      border-color: $black;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../../../styles/index.scss";
+
+.features {
+  width: 100vw;
+  max-width: $maxWidth;
+
+  &__info-block {
+    margin: 120px auto 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4px;
+    @media (max-width: $deviceSizeLG) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $deviceSizeSM) {
+      margin-top: 100px;
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: $deviceSizeXS) {
+      margin: 80px 16px 0;
+    }
+
+    &--element {
+      .element__item {
+        width: 100%;
+        max-width: 380px;
+        min-height: 135px;
+        margin: 0 auto 46px;
+        justify-self: center;
+        @include display-flex(flex-start, flex-start);
+        position: relative;
+        padding-left: 96px;
+        &--icon {
+          position: absolute;
+          top: 0;
+          left: 10px;
+          svg {
+            width: 66px;
+            height: 66px;
+          }
+        }
+
+        &--title {
+          font-size: 1.125rem;
+          line-height: 1.17em;
+          color: $backgroundPrimary;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+
+        &--text {
+          font-family: $fontFamilyName;
+          font-size: 1rem;
+          line-height: 1.125em;
+          letter-spacing: 0;
+          color: $primaryMiddleGrey;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../../../styles/index.scss";
+
+.travel-works {
+  width: 100vw;
+  max-width: $maxWidth;
+  @include display-flex;
+  padding: 0 16px;
+  background-color: $TravelDarkBrown;
+  &__image {
+    width: 100%;
+    max-width: 990px;
+  }
+}

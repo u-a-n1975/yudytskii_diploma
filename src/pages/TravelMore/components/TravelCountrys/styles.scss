@@ -1,0 +1,76 @@
+@import "../../../../styles/index.scss";
+
+.travel-countrys {
+  width: 100vw;
+  background: center top/auto 700px no-repeat
+      url("../../../../assets/images/Travel/Countres1.png"),
+    center bottom / auto 700px no-repeat
+      url("../../../../assets/images/Travel/Countres2.png");
+  &__content-container {
+    min-height: 1400px;
+    padding: 220px 16px 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__info-block {
+    width: 100%;
+    max-width: 540px;
+    padding: 45px 30px;
+    background-color: rgba($TravelBrown, $alpha: 0.9);
+    &:last-child {
+      margin-top: 5px;
+      align-self: flex-end;
+    }
+    &--country {
+      font-size: $fontSizeMiddle;
+      text-transform: capitalize;
+    }
+    &--title {
+      margin-top: 30px;
+      font-size: $fontSizeMiddle;
+      text-transform: uppercase;
+    }
+    &--text {
+      margin-top: 30px;
+      letter-spacing: 0;
+    }
+  }
+}
+.travel__button {
+  position: relative;
+  z-index: 1;
+  border: 1px solid $TravelPrimary;
+  margin-top: 45px;
+  background-color: $TravelPrimary;
+  overflow: hidden;
+  transition: text-shadow 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $TravelPrimary;
+    border: 1px solid rgba(16, 16, 16, 0.1);
+    text-shadow: 1px 1px 1px $black, 2px 2px 2px $black;
+    cursor: pointer;
+    color: $white;
+  }
+  p {
+    z-index: 2;
+    font-family: $fontFamiliTravelSecond;
+    font-size: $fontSizeBase;
+  }
+  &--fon {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 55px;
+    height: 60px;
+    background-color: $TravelPrimaryLight;
+    z-index: 2;
+
+    &:nth-child(2) {
+      left: 55px;
+      width: 90px;
+      transform: rotate(45deg);
+      transform-origin: top left;
+    }
+  }
+}

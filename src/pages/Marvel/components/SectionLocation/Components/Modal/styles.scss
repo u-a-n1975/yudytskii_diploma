@@ -1,0 +1,76 @@
+@import "../../../../../../styles/index.scss";
+
+.modal {
+  position: fixed;
+  z-index: 2000;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  @include display-flex(center, center, row);
+  overflow: hidden;
+  pointer-events: none;
+
+  &--is-open {
+    z-index: 10000;
+    pointer-events: auto;
+    transform: translateY(-100px);
+
+    .modal--content {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: modal-content 0.4s 0.2s forwards;
+    }
+
+    .modal {
+      &--backdrop {
+        opacity: 0;
+        animation: show 0.15s forwards;
+      }
+      &__font-icon-item {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &--content {
+    background-color: white;
+    border-radius: $borderRadius;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+    position: relative;
+    min-height: 100px;
+    max-height: 1000px;
+    overflow: auto;
+    width: 100%;
+    padding: 1.125rem;
+    margin: 2rem 1rem;
+    z-index: 10001;
+    max-width: 600px;
+  }
+
+  &--close-icon-wrapper {
+    width: 35px;
+    height: 35px;
+    @include display-flex;
+    border-radius: 2px;
+    background-color: $white;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    svg {
+      .cls-1 {
+        fill: $primaryMiddleGrey;
+      }
+    }
+  }
+
+  &--backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

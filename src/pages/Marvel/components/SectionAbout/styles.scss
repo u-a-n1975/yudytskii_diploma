@@ -1,0 +1,132 @@
+@import "../../styles.scss";
+
+.about {
+  width: 100vw;
+  max-width: $maxWidth;
+  background: left -70% center/ 57% auto no-repeat url("../../../../assets/images/Marvel/1.Hero-ellipse.png"),
+    bottom 150px right -160px / auto 30% no-repeat url("../../../../assets/images/Marvel/2.About-ipad.png");
+
+  &__title-block {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    &--description {
+      margin-top: 15px;
+    }
+  }
+
+  &__button {
+    margin: 12px;
+
+    &-wrap {
+      margin: 60px 0 0;
+      width: 100%;
+      @include display-flex(center, center, row);
+      @media (max-width: $deviceSizeXS) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__info-block {
+    width: 100%;
+    margin-bottom: 95px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--row {
+      margin: 80px auto 0;
+      .row__item {
+        @include display-flex;
+        width: 360px;
+        min-height: 400px;
+        padding: 30px;
+        background-color: $backgroundPrimary;
+        border: 1px solid $white;
+        color: $white;
+        transition: background-color 0.2s ease-in-out, fill 0.2s ease-in-out,
+          font-size 0.2s ease-in-out;
+        &:hover {
+          background-color: $primaryYellow;
+          .row__item--text {
+            font-size: 1rem;
+            font-weight: 1.125rem;
+            text-align: center;
+          }
+          .cls-1 {
+            fill: $white;
+            font-size: 126px;
+            font-family: Ionicons;
+          }
+        }
+        &--icon {
+          margin-bottom: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+
+          svg {
+            height: 126px;
+
+            .cls-1 {
+              fill: $primaryYellow;
+              font-size: 126px;
+              font-family: Ionicons;
+            }
+          }
+        }
+        &--title {
+          font-size: 24px;
+          font-weight: 30px;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+        &--text {
+          font-size: 0;
+          font-weight: 0;
+          text-align: center;
+          transition: font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__impressive-numbers {
+    font-size: 1.875rem;
+    line-height: 1.3em;
+    font-weight: 500;
+    text-align: center;
+    color: $primaryDarkGrey;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+  }
+
+  &-numbers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $deviceSizeSM) {
+      flex-direction: column;
+      width: initial;
+    }
+    &__nomber {
+      .nomber__item {
+        @include display-flex;
+        padding: 24px;
+        background-color: rgba(255, 255, 255, 0.65);
+        border-radius: 10px;
+        &--title {
+          font-size: 2.875rem;
+          color: $primaryDarkGrey;
+        }
+        &--text {
+          font-size: 0.8125rem;
+          color: $primaryMiddleGrey;
+        }
+      }
+    }
+  }
+}

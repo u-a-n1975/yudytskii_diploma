@@ -1,0 +1,66 @@
+@import "../../../../styles/index.scss";
+
+.footer {
+  width: 100vw;
+  max-width: $maxWidth;
+  .content-container {
+    @include display-flex(center, space-between, initial);
+    min-height: 226px;
+    padding: 48px 16px;
+    @media (max-width: $deviceSizeSM) {
+      height: 400px;
+      flex-direction: column;
+    }
+  }
+
+  &__head {
+    width: 100%;
+    background-color: $backgroundDarkBrown;
+  }
+  &__bottom {
+    width: 100%;
+    min-height: 40px;
+    background-color: $backgroundBrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: $white;
+  }
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid $white;
+      color: $white;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        .cls-1 {
+          fill: $white;
+        }
+      }
+    }
+    &--text {
+      margin-top: 30px;
+      font-size: 13px;
+      color: $white;
+    }
+  }
+
+  &__social-block a {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $backgroundDarkBrown;
+  }
+}

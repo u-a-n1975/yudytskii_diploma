@@ -1,0 +1,81 @@
+@import "../../../../styles/index.scss";
+
+.service {
+  width: 100vw;
+  max-width: $maxWidth;
+  background: left bottom/auto 88% no-repeat
+    url("../../../../assets/images/Marvel/7.Service_Img.png");
+  @media (max-width: $deviceSizeLG) {
+    background: left bottom/auto 88% no-repeat
+      url("../../../../assets/images/Marvel/7.Service_Img.png");
+  }
+  padding-bottom: 80px;
+  @media (max-width: $deviceSizeSM) {
+    padding-bottom: 50px;
+  }
+  @media (max-width: $deviceSizeXS) {
+    padding-bottom: 0px;
+  }
+  &__content-container {
+    align-items: flex-end;
+  }
+
+  &__wrap {
+    @media (max-width: $deviceSizeXS) {
+      width: 100%;
+    }
+  }
+  &__title-block {
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-block {
+    width: 100%;
+    max-width: 535px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+    @media (max-width: $deviceSizeXS) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .card__item {
+      width: 240px;
+      min-height: 223px;
+      margin-bottom: 55px;
+      @include display-flex;
+      background-color: rgba(255, 255, 255, 0.65);
+      border-radius: 10px;
+      &--icon {
+        margin-bottom: 30px;
+
+        svg {
+          height: 48px;
+
+          .cls-1 {
+            fill: $primaryDarkGrey;
+            font-size: 48px;
+            font-family: Ionicons;
+          }
+        }
+      }
+      &--title {
+        font-size: 1.125rem;
+        font-weight: 1.3125rem;
+        margin-bottom: 20px;
+        color: $primaryDarkGrey;
+        text-transform: uppercase;
+      }
+      &--text {
+        font-size: 1rem;
+        font-weight: 1.125rem;
+        text-align: center;
+        color: $primaryMiddleGrey;
+      }
+    }
+  }
+}

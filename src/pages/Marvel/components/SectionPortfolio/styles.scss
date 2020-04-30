@@ -1,0 +1,192 @@
+@import "../../../../styles/index.scss";
+
+.portfolio {
+  width: 100vw;
+  max-width: $maxWidth;
+  @include display-flex;
+
+  &__head {
+    width: 100vw;
+    max-width: $maxWidth;
+    padding: 150px 16px 80px;
+    background-color: $primaryYellow;
+    @media (max-width: $deviceSizeSM) {
+      padding-top: 120px;
+    }
+    @media (max-width: $deviceSizeXS) {
+      padding: 80px 16px 50px;
+    }
+  }
+
+  &__buttons-block {
+    margin-top: 60px;
+    @include display-flex(center, center, row);
+    flex-wrap: wrap;
+    @media (max-width: $deviceSizeXS) {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 40% 1fr 40%;
+      gap: 20px;
+      padding: 25px;
+    }
+  }
+
+  &__button {
+    width: max-content;
+    margin: 4px;
+    text-transform: capitalize;
+    font-size: 0.8125rem;
+    letter-spacing: 0.03em;
+    padding-top: 0;
+    padding-bottom: 0;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    &:hover {
+      fill: #fff;
+    }
+    @media (max-width: $deviceSizeXS) {
+      justify-self: center;
+      width: 100%;
+    }
+
+    &:first-child {
+      width: 35px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: $deviceSizeXS) {
+        grid-column: 2/3;
+        grid-row: 1/3;
+      }
+    }
+
+    &:hover {
+      background-color: $black;
+      border: 1px solid $black;
+      color: $white;
+    }
+  }
+
+  &__images-block {
+    @include display-flex(center, center, row);
+    flex-wrap: wrap;
+
+    &-item {
+      width: 25%;
+      position: relative;
+      @media (max-width: $deviceSizeLG) {
+        width: 33.333%;
+      }
+      @media (max-width: $deviceSizeMD) {
+        width: 50%;
+      }
+      @media (max-width: $deviceSizeSM) {
+        width: 100%;
+      }
+
+      &:hover {
+        animation: scaleHover 0.35s;
+        @media (hover: none) {
+          animation: scaleTouсh 0.35s;
+        }
+        .portfolio__hover-block {
+          transform: none;
+          animation: noneScale 0.35s;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__hover-block {
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    transform: scale3d(0, 0, 1);
+
+    &-wrap {
+      position: relative;
+      height: 100%;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-self: start;
+    }
+    &-title {
+      padding-left: 15px;
+      font-size: 1rem;
+      font-weight: 1rem;
+      letter-spacing: 0.024em;
+      color: $primaryDarkGrey;
+      text-transform: uppercase;
+    }
+    &-subtitle {
+      font-size: 0.64rem;
+      font-weight: 0.64rem;
+      letter-spacing: 0.024em;
+      color: $primaryMiddleGrey;
+      text-transform: uppercase;
+      margin-left: 4px;
+      transform: translateY(4px);
+    }
+  }
+  &__icons-block {
+    position: absolute;
+    right: 20px;
+    transform: translateY(-74%);
+    width: 95px;
+    height: 44px;
+    &--wrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 6px;
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+      background-color: $white;
+    }
+    &--link,
+    &--view {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      svg {
+        width: 30px;
+        height: 30px;
+
+        .cls-1 {
+          stroke: #000;
+          transition: stroke 0.25s ease-in-out;
+        }
+        .cls-2 {
+          fill: #000;
+          stroke: #000;
+          font-family: FontAwesome;
+          font-size: 15px;
+        }
+        .cls-4 {
+          fill: $white;
+          transition: fill 0.25s ease-in-out;
+        }
+      }
+      &:hover svg {
+        .cls-1 {
+          stroke: #e3cc00;
+        }
+        .cls-4 {
+          fill: $primaryYellow;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../../../styles/index.scss";
+
+.travel-hero {
+  width: 100vw;
+  max-width: $maxWidth;
+  height: 100vh;
+  background: right bottom/ cover no-repeat
+    url("../../../../assets/images/Travel/1.header.png");
+  padding: 16px;
+  @include display-flex;
+  h1 {
+    font-size: $fontSizeBig;
+    font-weight: $fontWeightBold;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin-top: 20px;
+    font-size: $fontSizeML;
+    letter-spacing: 0.31em;
+    text-transform: capitalize;
+  }
+  &__search {
+    @include display-flex(center, center, row);
+    width: 100%;
+    max-width: 650px;
+    margin-top: 50px;
+    border: 2px solid $white;
+
+    &--input {
+      width: 100%;
+      height: 60px;
+      border: 1px solid $white;
+      padding: 0 16px;
+      text-align: center;
+      font-size: $fontSizeSmall;
+      letter-spacing: 0.1em;
+      text-transform: capitalize;
+    }
+
+    &--button {
+      height: 100%;
+      padding: 0;
+      background-color: $TravelPrimary;
+      border: 1px solid $white;
+      a {
+        width: max-content;
+        @include display-flex(center, center, row);
+        padding-left: 32px;
+        font-family: $fontFamiliTravelSecond;
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+
+    &--icon {
+      @include display-flex;
+      cursor: pointer;
+      svg {
+        width: 50px;
+        height: 50px;
+        .cls-1 {
+          stroke: none;
+        }
+        .cls-2 {
+          fill: $TravelPrimary;
+          stroke: $white;
+        }
+        .cls-4 {
+          fill: none;
+        }
+      }
+    }
+  }
+  &__scroll {
+    margin-top: 120px;
+    font-size: $fontSizeSmall;
+    text-transform: capitalize;
+    &--icon {
+      width: 25px;
+    }
+  }
+}

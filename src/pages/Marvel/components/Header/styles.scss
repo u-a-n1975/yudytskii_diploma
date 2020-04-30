@@ -1,0 +1,60 @@
+@import "../../styles.scss";
+
+.header {
+  width: 100vw;
+  max-width: $maxWidth;
+  height: $hedaerHeight;
+  position: absolute;
+  z-index: 9999;
+  top: calc(100vh - 80px);
+  background-color: $backgroundPrimary;
+  color: $white;
+  &--on-scroll {
+    position: fixed;
+    top: 0;
+  }
+
+  &__content-container {
+    padding: 0 16px;
+    @include display-flex(initial);
+  }
+
+  &__content {
+    display: flex;
+    height: 80px;
+    @media (max-width: $deviceSizeXS) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__right-block {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $deviceSizeXS) {
+      width: max-content;
+    }
+  }
+
+  &__menu-btn-wrapper {
+    @media (max-width: $deviceSizeSM) {
+      display: flex;
+      flex-shrink: 0;
+      margin-left: 20px;
+    }
+  }
+  &__logo {
+    @include display-flex;
+    flex-shrink: 0;
+    width: 186px;
+    margin: 0 10px;
+    transition: filter 1s ease-in-out;
+
+    &:hover {
+      filter: hue-rotate(360deg);
+    }
+    @media (max-width: $deviceSizeMD) {
+      margin: 0;
+    }
+  }
+}

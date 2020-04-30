@@ -1,0 +1,13 @@
+@import "../../styles/index.scss";
+
+.bicycle {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  color: $PrimaryText;
+  font-family: $fontFamilyTitle;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
+}

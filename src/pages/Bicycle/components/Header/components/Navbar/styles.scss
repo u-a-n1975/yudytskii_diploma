@@ -1,0 +1,59 @@
+@import "../../../../../../styles/index.scss";
+
+.bicycle-navbar {
+  @include display-flex(center, center, row);
+  width: max-content;
+  height: 117px;
+  border-radius: 16px;
+  @media (max-width: $deviceSizeXS) {
+    display: none;
+  }
+  &__logo {
+    width: 94px;
+    height: 85px;
+    margin: 0 10px;
+    &--open {
+      margin: 0 40px 0 10px;
+      svg {
+        height: 70px;
+      }
+      display: none;
+      @media (max-width: $deviceSizeXS) {
+        display: block;
+      }
+    }
+  }
+
+  &__left-block,
+  &__right-block {
+    width: 100%;
+    max-width: 216px;
+    @include display-flex(center, space-between, row);
+  }
+
+  &__item {
+    position: relative;
+    color: $HeaderText;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px dotted rgba($color: $PrimaryText, $alpha: 0);
+    font-family: $fontFamilyTitle;
+    font-size: 0.8125rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: border 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+
+    &:hover {
+      border: 2px dotted $PrimaryText;
+      text-shadow: 1px 1px 1px $white, 1px 1px 2px $black;
+    }
+
+    &--active {
+      position: relative;
+      background-color: rgba($color: $PrimaryGreen, $alpha: 0.5);
+    }
+  }
+}

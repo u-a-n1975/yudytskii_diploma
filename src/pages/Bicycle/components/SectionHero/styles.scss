@@ -1,0 +1,16 @@
+@import "../../../../styles/index.scss";
+
+.bicycle-hero {
+  width: 100vw;
+  max-width: $maxWidth;
+  height: 100vh;
+  background: right 50% top 0 / cover no-repeat
+    url("../../../../assets/images/Bicycle/top-img.jpg");
+  @media (max-width: $deviceSizeLG) {
+    background: right 50% top 0 / auto 100% no-repeat fixed
+      url("../../../../assets/images/Bicycle/top-img.jpg");
+  }
+  .content-container {
+    padding-top: 35px;
+  }
+}

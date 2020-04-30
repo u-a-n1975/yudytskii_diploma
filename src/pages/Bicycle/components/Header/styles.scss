@@ -1,0 +1,21 @@
+@import "../../../../styles/index.scss";
+
+.bicycle-header {
+  width: 100vw;
+  max-width: $maxWidth;
+  height: 85px;
+  position: fixed;
+  z-index: 9999;
+  top: 35px;
+
+  &__content-container {
+    width: max-content;
+    @include display-flex(center, center, row);
+    padding: 0 16px;
+    border-radius: 16px;
+    background-color: rgba($color: #f3f4f9, $alpha: 0.7);
+    @media (max-width: $deviceSizeXS) {
+      justify-content: space-evenly;
+    }
+  }
+}

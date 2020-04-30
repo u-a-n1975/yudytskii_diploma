@@ -1,0 +1,196 @@
+@import "../../../../styles/index.scss";
+
+.blog {
+  width: 100vw;
+  max-width: $maxWidth;
+
+  &__card {
+    max-width: 264px;
+    overflow: hidden;
+    border: 1px solid $white;
+    outline: none;
+    transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+    &:hover {
+      background-color: $primaryGrey;
+      border: 1px solid $primaryMiddleGrey;
+    }
+
+    &--wrap {
+      @include display-flex(center, flex-start);
+      margin: 0 16px 16px;
+    }
+
+    &--content {
+      width: 264px;
+      height: 193px;
+    }
+
+    &--date {
+      transform: translateY(-50%);
+      padding: 10px 32px;
+      background-color: $primaryGrey;
+      border-radius: 16px 16px 16px 16px;
+      font-size: 0.8125rem;
+      line-height: 1;
+      color: $primaryDarkGrey;
+      font-family: $fontFamilyText;
+      text-transform: uppercase;
+      border: 1px solid $primaryGrey;
+      transition: border 0.2s ease-in-out;
+    }
+
+    &--title {
+      margin-top: 20px;
+      font-family: $fontFamilyTitle;
+      font-size: 1.125rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: $primaryDarkGrey;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &--info {
+      font-family: $fontFamilyName;
+      font-size: 0.625rem;
+      line-height: 1em;
+      color: $primaryMiddleGrey;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+    &--button {
+      @include display-flex(center, center, row);
+      margin: 30px auto;
+      width: max-content;
+      height: 25px;
+      background-color: $primaryGrey;
+      border-radius: 12px;
+      padding: 0 20px;
+      font-size: 0.61rem;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: background-color 0.25s ease-in-out, border 0.25s ease-in-out;
+    }
+    &--text,
+    .Collapsible__contentInner {
+      font-family: $fontFamilyText;
+      text-align: justify;
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      color: $primaryMiddleGrey;
+      transition: font-size 0.5s ease-in-out, margin 0.55s ease-in-out;
+      &:hover .blog__card--button {
+        border: 1px solid $black;
+        background-color: $primaryYellow;
+      }
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    margin-top: 110px;
+    border-radius: 10px;
+    position: relative;
+    @media (max-width: $deviceSizeSM) {
+      margin-top: 80px;
+    }
+    @media (max-width: $deviceSizeXS) {
+      margin-top: 50px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0.65;
+      z-index: 0;
+    }
+  }
+}
+
+.Collapsible__trigger,
+.is-open > div {
+  margin-top: 0;
+  font-size: 0;
+}
+
+.blog__slider {
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    top: 220px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    &::before {
+      display: none;
+    }
+    svg {
+      width: 40px;
+      height: 40px;
+      .cls1 {
+        fill: $white;
+        stroke: #4444;
+        transition: stroke 0.25s ease-in-out;
+      }
+    }
+    &:hover {
+      .cls1 {
+        stroke: #000;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: -5px;
+  }
+  .slick-next {
+    right: -5px;
+  }
+}
+
+.blog__card--slider {
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    top: 140px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    &::before {
+      display: none;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      .cls1 {
+        fill: none;
+        stroke: $primaryDarkGrey;
+        transition: fill 0.25s ease-in-out, stroke 0.25s ease-in-out;
+      }
+    }
+    &:hover .cls1 {
+      fill: $black;
+      stroke: $white;
+    }
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-prev {
+    left: 18px;
+  }
+  .slick-next {
+    right: 20px;
+  }
+}
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+}

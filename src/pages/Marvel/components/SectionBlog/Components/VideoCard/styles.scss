@@ -1,0 +1,41 @@
+.video-card {
+  width: 100%;
+  border-radius: 4px;
+  background-color: grey;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &__video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    border-radius: 4px 4px 0 0;
+    padding-top: 25px;
+    overflow: hidden;
+    &-ratio_16x9 {
+      padding-bottom: 56.25%;
+    }
+    &-ratio_14x9 {
+      padding-bottom: 64.29%;
+    }
+    &-ratio_4x3 {
+      padding-bottom: 75%;
+    }
+    &-ratio_264x193 {
+      padding-bottom: 64.38%;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../../../../styles/index.scss";
+
+.travel-testimonial {
+  width: 100vw;
+  max-width: $maxWidth;
+  background: right bottom/ cover no-repeat
+    url("../../../../assets/images/Travel/testimonial-fon.png");
+  &__content-container {
+    min-height: 790px;
+  }
+  &__title {
+    font-family: $fontFamiliTravelSecond;
+    font-size: $fontSizeLB;
+    text-transform: capitalize;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    margin-top: 92px;
+    display: flex;
+    background-color: $TravelDarkBrown;
+    @media (max-width: $deviceSizeMD) {
+      flex-direction: column;
+    }
+  }
+  &__image {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    background: center right / cover no-repeat
+      url("../../../../assets/images/Travel/testimonial1.png");
+    img {
+      position: absolute;
+    }
+    @media (max-width: $deviceSizeMD) {
+      width: 100%;
+      height: 60vw;
+    }
+  }
+  &__info-block {
+    width: 100%;
+    max-width: 665px;
+    padding: 50px 30px 45px 55px;
+    @media (max-width: $deviceSizeMD) {
+      max-width: 100%;
+    }
+    &--title {
+      font-size: $fontSizeMiddle;
+      text-transform: uppercase;
+      @media (max-width: $deviceSizeMD) {
+        text-align: center;
+      }
+    }
+    &--text {
+      margin-top: 45px;
+      text-indent: 50px;
+    }
+  }
+}

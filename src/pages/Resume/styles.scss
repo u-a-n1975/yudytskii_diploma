@@ -1,0 +1,265 @@
+@import "../../styles/index.scss";
+
+.resume {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 150px 80px;
+  font-family: $fontFamilyName;
+  .title-block__item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 140px;
+
+    .person__item {
+      text-transform: capitalize;
+      white-space: nowrap;
+      &--name {
+        text-transform: capitalize;
+        font-size: $fontSizeXXL;
+        font-weight: $fontWeightBold;
+      }
+      &--profession {
+        margin-bottom: 45px;
+        font-size: $fontSizeBig;
+        font-weight: $fontWeightMedium;
+      }
+    }
+    &--avatar {
+      position: absolute;
+      width: 40%;
+      right: 0;
+      align-self: center;
+      img {
+        width: 100%;
+      }
+    }
+    .row__item {
+      display: flex;
+      &--name {
+        white-space: nowrap;
+        text-transform: capitalize;
+        font-size: 36px;
+        font-weight: $fontWeightBold;
+        line-height: 72px;
+      }
+      &--data {
+        margin-left: 16px;
+        font-size: 30px;
+        font-weight: $fontWeightBase;
+        line-height: 70px;
+      }
+    }
+  }
+  .about__item--text {
+    font-size: 30px;
+    font-weight: $fontWeightBase;
+    line-height: 2em;
+    &::first-letter {
+      font-size: 32px;
+      font-weight: $fontWeightBold;
+    }
+  }
+  &__title {
+    margin-top: 60px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: $fontWeightBold;
+    line-height: 2em;
+  }
+  .education__item {
+    margin-bottom: 60px;
+    font-size: 32px;
+    line-height: 2em;
+    .row__item {
+      display: flex;
+      &--date {
+        width: 25%;
+        font-weight: $fontWeightBase;
+      }
+      &--institution {
+        width: 75%;
+        .institution__item {
+          margin-left: 16px;
+          &--name {
+            font-weight: $fontWeightBold;
+          }
+          &--speciality {
+            font-weight: $fontWeightBase;
+          }
+        }
+      }
+    }
+  }
+
+  .skill__item {
+    display: flex;
+    margin-bottom: 60px;
+    font-size: 32px;
+    &--title {
+      width: 25%;
+      text-transform: capitalize;
+      font-weight: $fontWeightBold;
+      line-height: 2em;
+    }
+    &--skills {
+      margin-left: 16px;
+      width: 75%;
+      font-weight: $fontWeightBase;
+      line-height: 2em;
+    }
+  }
+
+  .language__item {
+    width: 100%;
+    display: flex;
+    font-size: 32px;
+    line-height: 2em;
+    &--title {
+      width: 25%;
+      text-transform: capitalize;
+      font-weight: $fontWeightBold;
+    }
+    &--languages {
+      margin-left: 16px;
+      display: flex;
+      width: 75%;
+      .languages__item {
+        width: 100%;
+      }
+      .row__item {
+        display: flex;
+        width: 100%;
+        &--name {
+          width: 40%;
+          text-transform: capitalize;
+          font-weight: $fontWeightBold;
+        }
+        &--lavel {
+          width: 60%;
+          white-space: nowrap;
+          font-weight: $fontWeightBase;
+        }
+      }
+    }
+  }
+  @media (max-width: $deviceSizeLG) {
+    padding: 120px 50px;
+    .title-block__item {
+      margin-bottom: 100px;
+      .person__item {
+        &--name {
+          font-size: 60px;
+        }
+        &--profession {
+          font-size: 40px;
+        }
+      }
+      .row__item {
+        &--name {
+          font-size: 30px;
+        }
+        &--data {
+          font-size: 28px;
+        }
+      }
+    }
+    .resume__title,
+    .education__item {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: $deviceSizeMD) {
+    padding: 100px 40px;
+    .title-block__item {
+      margin-bottom: 80px;
+      .person__item {
+        &--name {
+          font-size: 50px;
+        }
+        &--profession {
+          font-size: 35px;
+        }
+      }
+      .row__item {
+        &--name {
+          font-size: 28px;
+        }
+        &--data {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .resume__title,
+    .about__item--text,
+    .education__item,
+    .skill__item,
+    .language__item {
+      font-size: 28px;
+    }
+  }
+  @media (max-width: $deviceSizeSM) {
+    padding: 80px 25px;
+    .title-block__item--avatar {
+      position: relative;
+      width: 60%;
+    }
+    .resume__title-block {
+      .person__item {
+        text-align: center;
+        &--name {
+          font-size: 60px;
+        }
+        &--profession {
+          font-size: 40px;
+        }
+      }
+      .row__item {
+        &--name {
+          font-size: 26px;
+        }
+        &--data {
+          font-size: 24px;
+        }
+      }
+    }
+    .resume__title,
+    .about__item--text,
+    .education__item,
+    .skill__item,
+    .language__item {
+      font-size: 26px;
+    }
+  }
+  @media (max-width: $deviceSizeXS) {
+    padding: 50px 16px;
+    .resume__title-block {
+      .person__item {
+        &--name {
+          font-size: 40px;
+        }
+        &--profession {
+          font-size: 30px;
+        }
+      }
+      .row__item {
+        &--name {
+          font-size: 24px;
+        }
+        &--data {
+          font-size: 22px;
+        }
+      }
+    }
+    .resume__title,
+    .about__item--text,
+    .education__item,
+    .skill__item,
+    .language__item {
+      font-size: 22px;
+    }
+  }
+}

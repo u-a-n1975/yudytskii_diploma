@@ -1,0 +1,43 @@
+@import "../../../../../../styles/index.scss";
+
+.travel-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 574px;
+
+  &__item {
+    margin: 0 8px;
+    padding: 5px 10px;
+    border: 2px solid $TravelPrimary;
+    border-radius: 16px;
+    transition: border 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+    &:hover {
+      border-top: 2px solid $white;
+      text-shadow: 1px 1px 1px $black, 2px 2px 2px $black;
+    }
+    @media (max-width: $deviceSizeMD) {
+      padding: 5px;
+    }
+
+    &--active {
+      border-bottom: 2px solid $white;
+      font-weight: 700;
+      text-shadow: 1px 1px 1px $black, 2px 2px 2px $black;
+    }
+  }
+
+  a {
+    font-family: $fontFamiliTravelSecond;
+    font-size: $fontSizeSmall;
+    letter-spacing: 0;
+    font-weight: $fontWeightBase;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  @media screen and (max-width: $deviceSizeSM) {
+    display: none;
+  }
+}

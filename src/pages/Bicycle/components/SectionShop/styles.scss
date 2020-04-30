@@ -1,0 +1,177 @@
+@import "../../../../styles/index.scss";
+
+.bicycle-shop {
+  width: 100vw;
+  max-width: $maxWidth;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .images-block {
+    display: flex;
+    flex-wrap: wrap;
+    &__saddles,
+    &__bikes,
+    &__shop {
+      width: 33.3333vw;
+      height: 33.375vw;
+    }
+    &__bikes {
+      width: 33.3333vw;
+      height: 33.375vw;
+    }
+    &__shop {
+      width: 33.3333vw;
+      height: 33.375vw;
+    }
+  }
+  .saddles__item,
+  .bikes__item,
+  .shop__item {
+    display: flex;
+    flex-wrap: wrap;
+    &--image-1,
+    &--image-2,
+    &--image-3 {
+      width: 50%;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: rgba($color: $PrimaryGreen, $alpha: 0.7);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      &::after {
+        position: absolute;
+        width: 98px;
+        height: 57px;
+        content: "";
+        background-image: url("../../../../assets/SVG/Bicycle/shopNow.svg");
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      &:hover {
+        &::before,
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    &--image-3 {
+      width: 100%;
+    }
+  }
+  .shop__item {
+    &--image-1 {
+      width: 100%;
+    }
+    &--image-3 {
+      width: 50%;
+    }
+  }
+  @media (max-width: $deviceSizeLG) {
+    .images-block__saddles,
+    .images-block__bikes {
+      width: 50vw;
+      height: 50vw;
+    }
+    .images-block__shop {
+      width: 100vw;
+      height: 25vw;
+      .shop__item {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+  @media (max-width: $deviceSizeMD) {
+    .images-block__saddles {
+      width: 66.6666vw;
+      height: 66.75vw;
+    }
+    .images-block__bikes {
+      width: 33.3333vw;
+      height: 133.5vw;
+      .bikes__item {
+        flex-direction: column;
+        & > div {
+          width: 33.3333vw;
+          height: 66.75vw;
+        }
+      }
+    }
+    .images-block__shop {
+      width: 66.6666vw;
+      height: 66.75vw;
+      transform: translateY(-100%);
+      .shop__item {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  @media (max-width: $deviceSizeSM) {
+    .images-block__saddles,
+    .images-block__shop,
+    .images-block__bikes {
+      width: 100vw;
+      height: 100.125vw;
+      transform: none;
+    }
+    .images-block__bikes {
+      .bikes__item {
+        flex-direction: row;
+        & > div {
+          width: 50vw;
+          height: 100.125vw;
+        }
+      }
+    }
+  }
+  @media (max-width: $deviceSizeXS) {
+    .images-block__saddles,
+    .images-block__shop,
+    .images-block__bikes {
+      transform: none;
+      height: 100%;
+      & > div {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        & > div {
+          width: 100%;
+        }
+      }
+    }
+    .images-block__bikes {
+      .bikes__item {
+        flex-direction: row;
+        & > div {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  &__button {
+    width: initial;
+    font-size: $fontSizeSmall;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    &--wrap {
+      // width: 100%;
+      @include display-flex;
+      padding: 75px 16px;
+      background-color: $black;
+    }
+    &:hover {
+      background-color: $PrimaryGreen;
+    }
+  }
+}
