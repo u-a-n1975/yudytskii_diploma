@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/yudytskii_diploma/precache-manifest.79bafe606f07360ade383ba116648633.js"
+  "/yudytskii_diploma/precache-manifest.ea9eb8fc8859a9853f72def3ac3b0a9a.js"
 );
 
 self.addEventListener('message', (event) => {
