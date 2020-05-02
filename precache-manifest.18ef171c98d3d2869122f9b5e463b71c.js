@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bdcc513369f13fc37a0c351caca2000",
+    "revision": "c4053e8ca83fc83d7e4fefb1e5068098",
     "url": "/yudytskii_diploma/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yudytskii_diploma/static/css/2.41d09715.chunk.css"
   },
   {
-    "revision": "3cdd67f079c5d51f112d",
+    "revision": "74c1d170b12aaa86c1e5",
     "url": "/yudytskii_diploma/static/css/main.599effb3.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yudytskii_diploma/static/js/2.f8ab76e7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3cdd67f079c5d51f112d",
-    "url": "/yudytskii_diploma/static/js/main.19ec4f81.chunk.js"
+    "revision": "74c1d170b12aaa86c1e5",
+    "url": "/yudytskii_diploma/static/js/main.7a69bf99.chunk.js"
   },
   {
     "revision": "6120a18ee150ece60c2b",
